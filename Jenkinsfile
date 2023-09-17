@@ -33,10 +33,17 @@ pipeline{
                 }
                }	
            }
+<<<<<<< HEAD
        }       
         stage("Quality Gate"){
            steps{
 	           script {
+=======
+       }
+       stage("Quality Gate"){
+           steps {
+                   script {
+>>>>>>> 4899f9f239c51eacd43a7d52d6e80c3857ea410f
                 waitForQualityGate abortPipeline: false, credentialsId: 'jenkins-sonarqube-token'
                 }
                }	

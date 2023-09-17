@@ -9,7 +9,7 @@ pipeline{
             RELEASE = "1.0.0"
             DOCKER_USER = "mandu010"
             DOCKER_PASS = "docker_creds"
-            IMAGE_NAME = "mandu_project"
+            IMAGE_NAME = "mandu_devops_project"
             IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
     }
     stages{

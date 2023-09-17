@@ -46,7 +46,7 @@ pipeline{
            steps{
 	           script {
 		sh "echo ${IMAGE_NAME}"
-		sh "echo ${IMAGE_NAME}"
+		sh "echo ${IMAGE_TAG}"
                 docker.withRegistry('',DOCKER_PASS){
                     docker_image = docker.build "{$IMAGE_NAME}"
                 }

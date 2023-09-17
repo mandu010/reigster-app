@@ -5,7 +5,7 @@ pipeline{
         maven 'Maven3'
     }
     environment{
-            APP_NAME = "mandu-app-pipeline"
+            APP_NAME = "mandu_app_pipeline2"
             RELEASE = "1.0.0"
             DOCKER_USER = "mandu010"
             DOCKER_PASS = "docker_creds"
@@ -45,6 +45,8 @@ pipeline{
         stage("Build and Push Into Docker Hub"){
            steps{
 	           script {
+		sh "echo ${IMAGE_NAME}"
+		sh "echo ${IMAGE_NAME}"
                 docker.withRegistry('',DOCKER_PASS){
                     docker_image = docker.build "{$IMAGE_NAME}"
                 }

@@ -5,11 +5,11 @@ pipeline{
         maven 'Maven3'
     }
     environment{
-            APP_NAME = "register-app-pipeline"
+            APP_NAME = "mandu-app-pipeline"
             RELEASE = "1.0.0"
             DOCKER_USER = "mandu010"
             DOCKER_PASS = "docker_creds"
-            IMAGE_NAME = "mandu_devops_project"
+            IMAGE_NAME = "${DOCKER_USER}" + "/" + "${APP_NAME}"
             IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
     }
     stages{

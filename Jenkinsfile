@@ -41,7 +41,6 @@ pipeline{
                 }
                }	
            }
-<<<<<<< HEAD
        }       
         stage("Build and Push Into Docker Hub"){
            steps{
@@ -55,6 +54,5 @@ pipeline{
                 }
                }	
            }
-<<<<<<< HEAD
        }       
 }
